@@ -24,7 +24,7 @@ public abstract class LabTest {
         this.isAvailable = isAvailable; 
     }
     
-    public String returnLabTestInfo(){
+    public String toString(){
         String output = "Test name: "+this.title+"\n"
                 + "Cost: "+this.cost+"\n"
                 + "Availability: "+this.isAvailable;

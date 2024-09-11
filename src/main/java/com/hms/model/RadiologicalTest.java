@@ -24,28 +24,12 @@ public class RadiologicalTest extends LabTest{// implements TestReport, CostCalc
         this.plateDimention = plateDimention;
     }
    
-    public String returnTestInfo(){
+    public String toString(){
         String output = "Test name: "+this.title+"\n"
                 + "Cost: "+this.cost+"\n"
                 + "Plate Dimention: "+this.plateDimention+"\n"
                 + "Availability: "+this.isAvailable+"\n";
         return output;
     }
-//    void search(String title){
-//        if(this.title == title)
-//            returnLabTestInfo();
-//        else
-//            System.out.println("Not found");
-//    }
 
-//    @Override
-    public double calcCost() {
-        double totalCost=0;
-        
-        return totalCost;
-    }
-//    @Override
-    public boolean deliverReport() {
-        return false;
-    }
 }

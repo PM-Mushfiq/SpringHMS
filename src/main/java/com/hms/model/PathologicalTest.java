@@ -33,21 +33,10 @@ public class PathologicalTest extends LabTest{ //implements TestReport, CostCalc
     }
     
     @Override
-    public String returnLabTestInfo(){
-        String output = super.returnLabTestInfo()+"\n"
+    public String toString(){
+        String output = super.toString()+"\n"
                 + "Reagent: "+this.reagent+"\n";
         return output;
     }
 
-    //@Override
-    public double calcCost() {
-        double totalCost=0;// = this.cost- this.cost* ;
-        
-        return totalCost;
-    }
-
-    //@Override
-    public boolean deliverReport() {
-        return false;
-    }
 }

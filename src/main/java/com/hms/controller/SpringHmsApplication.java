@@ -9,7 +9,7 @@ public class SpringHmsApplication {
 	public static void main(String[] args) {
 		System.out.println("Test compilation for \"Spring HMS\"");
 
-		//SpringApplication.run(SpringHmsApplication.class, args);
+		SpringApplication.run(SpringHmsApplication.class, args);
 	}
 
 }
