@@ -17,5 +17,4 @@ public class LabTestController {
     public void showLabTests(){
         System.out.println(labTests.toString());
     }
-    //Date d = new Date();
 }
