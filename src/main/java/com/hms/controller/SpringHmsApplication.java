@@ -9,8 +9,9 @@ import javax.swing.*;
 public class SpringHmsApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Test run for \"Spring HMS\"");
+
 		SpringApplication.run(SpringHmsApplication.class, args);
+		System.out.println("Test run for \"Spring HMS\"");
 
 		try {
 			// The newInstance() call is a work around for some broken Java implementations
