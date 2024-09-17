@@ -1,7 +1,7 @@
 
 package com.hms.model;
-
-import jakarta.persistence.Entity;
+//import javax.persistence.Entity;
+import jakarta.persistence.*;
 
 /**
  *
@@ -10,6 +10,9 @@ import jakarta.persistence.Entity;
 
 @Entity
 public abstract class LabTest {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    protected Long id;
     protected String title;
     protected double cost;
     protected boolean isAvailable;
