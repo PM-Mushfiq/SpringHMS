@@ -1,30 +1,26 @@
 package com.hms.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int mid;
-    @Getter
+
     private String username;
     @Setter
     private String password;
-    @Getter
     private String fullName;
-    @Getter
     private String phone;
-    @Getter
     private int age;
-    @Getter
     private char sex;
     private String address;
     private String userType;
-
-    public User() { }
 
     public User(String phone) {
         this.phone = phone;
