@@ -15,7 +15,7 @@ public class SpringHmsApplication {
 			// The newInstance() call is a work around for some broken Java implementations
 			Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
 			//JOptionPane.showMessageDialog(null,"JDBC Driver load success");
-			System.out.println("JDBC Driver loaded successfully");
+			System.out.println("DB connected. JDBC Driver loaded successfully");
 		} catch (Exception ex) {
 			// handle the error
 			System.out.println("Problem with JDBC Driver"+ex.toString());

@@ -7,7 +7,7 @@ import jakarta.persistence.*;
  *
  * @author Muhammad Mushfiq at SIMEC Systems
  */
-
+@Inheritance
 @Entity
 public abstract class LabTest {
     @Id
