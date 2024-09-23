@@ -1,32 +1,36 @@
 package com.hms.service;
 
 import com.hms.model.User;
-import com.hms.repository.UserRepo;
+import com.hms.repository.UserJPARepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceJPAImpl implements IUserService {
 
     @Autowired
-    private UserRepo userRepo;
+    private UserJPARepo userJPARepo;
 
     @Override
     public User saveUser(User user) {
-        return userRepo.save(user);
+        return userJPARepo.save(user);
     }
 
     @Override
     public List<User> fetchUserList() {
-        return userRepo.findAll();
+        return userJPARepo.findAll();
     }
 
     @Override
     public User fetchUserById(int userId) {
-        return userRepo.findById(userId).get();
+        return userJPARepo.findById(userId).get();
+    }
+
+    @Override
+    public void deleteUserById(int userId) {
+        userJPARepo.deleteById(userId);
     }
 
 }
