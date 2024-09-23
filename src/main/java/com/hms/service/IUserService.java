@@ -11,5 +11,7 @@ public interface IUserService {
 
     public User fetchUserById(int userId);
 
-    void deleteUserById(int userId);
+    public void deleteUserById(int userId);
+
+    User updateUser(int userId, User user);
 }

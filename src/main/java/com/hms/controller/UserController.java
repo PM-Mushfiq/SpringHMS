@@ -20,7 +20,7 @@ public class UserController {
 
     @PutMapping("/users/{id}")
     public User editUser(@PathVariable("id") int userId, @RequestBody User user){
-        return userService.saveUser(user);
+        return userService.updateUser(userId, user);
     }
 
 //    @PatchMapping("/users")

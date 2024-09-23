@@ -1,6 +1,7 @@
 package com.hms.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -9,6 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Getter
+@Setter
 //@Table()
 public class User {
     @Id
@@ -23,10 +25,12 @@ public class User {
     private String password;
 
     @NotNull
+    @NotBlank(message = "Please Add Full Name")
     @Column(nullable = false)
     private String fullName;
 
     @NotNull
+    @NotBlank(message = "Please Add Phone Number")
     @Column(nullable = false)
     private String phone;
 
@@ -42,21 +46,21 @@ public class User {
     @Column(nullable = true)
     private String userType;
 
-    public User(String fullName, String phone) {
-        this.fullName = fullName;
-        this.phone = phone;
-    }
-
-    public User(String username, String password, String fullName, String phone, int age, char sex, String address, String userType) {
-        this.username = username;
-        this.password = password;
-        this.fullName = fullName;
-        this.phone = phone;
-        this.age = age;
-        this.sex = sex;
-        this.address = address;
-        this.userType = userType;
-    }
+//    public User(String fullName, String phone) {
+//        this.fullName = fullName;
+//        this.phone = phone;
+//    }
+//
+//    public User(String username, String password, String fullName, String phone, int age, char sex, String address, String userType) {
+//        this.username = username;
+//        this.password = password;
+//        this.fullName = fullName;
+//        this.phone = phone;
+//        this.age = age;
+//        this.sex = sex;
+//        this.address = address;
+//        this.userType = userType;
+//    }
 
 //    @Override
 //    public String toString() {
